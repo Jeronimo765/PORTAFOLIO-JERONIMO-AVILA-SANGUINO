@@ -1,0 +1,38 @@
+<section id="contact">
+  <div class="container">
+
+    <div class="section-header" appScrollAnimation>
+      <span class="section-tag">// 05 — contact</span>
+      <h2 class="section-title">¿Trabajamos juntos?</h2>
+      <p class="section-desc">
+        Disponible para proyectos freelance, posiciones fulltime y colaboraciones.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <a
+        *ngFor="let link of links"
+        [href]="link.href"
+        class="contact-card"
+        appScrollAnimation>
+
+        <div class="contact-icon"
+             [style.color]="link.color"
+             [style.border-color]="link.color + '33'">
+          {{ link.icon }}
+        </div>
+
+        <div class="contact-info">
+          <span class="contact-label">{{ link.label }}</span>
+          <span class="contact-value">{{ link.value }}</span>
+        </div>
+
+        <svg class="arrow" width="18" height="18" fill="none"
+             stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>

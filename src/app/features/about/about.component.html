@@ -1,0 +1,102 @@
+<section id="about">
+    <div class="container">
+
+        <div class="section-header" appScrollAnimation>
+            <span class="section-tag">// 01 — about me</span>
+            <h2 class="section-title">
+                Construyo el futuro,<br />
+                <span class="muted">línea a línea.</span>
+            </h2>
+        </div>
+
+        <div class="bento-grid">
+
+            <div class="bento-card span-8 glow-green" appScrollAnimation>
+                <h3>Jerónimo Ávila Sanguino</h3>
+                <p>
+                    Estudiante y aspirante a desarrollador de software con base sólida
+                    en tecnologías web. Tengo experiencia práctica en
+                    <strong>HTML y CSS</strong> para construir interfaces responsivas,
+                    <strong>JavaScript y TypeScript</strong> para aplicaciones dinámicas,
+                    y <strong>Node.js con Express</strong> para crear REST APIs con
+                    buenas prácticas de backend.
+                </p>
+                <p>
+                    He desarrollado proyectos académicos y personales que demuestran mis
+                    habilidades técnicas, capacidad de resolución de problemas y
+                    compromiso con el aprendizaje continuo en el desarrollo de software.
+                </p>
+                <div class="chips">
+                    <span class="chip green">Clean Code</span>
+                    <span class="chip blue">REST APIs</span>
+                    <span class="chip purple">Bases de Datos</span>
+                    <span class="chip amber">Responsive Design</span>
+                    <span class="chip cyan">Git & GitHub</span>
+                </div>
+            </div>
+
+            <div class="bento-card terminal span-4" appScrollAnimation>
+                <div class="terminal-bar">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green-dot"></span>
+                    <span class="window-title">zsh ~ portfolio</span>
+                </div>
+                <div class="terminal-body">
+                    <div><span class="prompt">&#10145;</span> <span class="cmd">whoami</span></div>
+                    <div class="out">Jerónimo Ávila S.</div>
+                    <div class="spacer"></div>
+                    <div><span class="prompt">&#10145;</span> <span class="cmd">cat stack.json</span></div>
+                    <div class="out">&#123;</div>
+                    <div class="out">&nbsp;&nbsp;"frontend": <span class="hl">"Angular"</span>,</div>
+                    <div class="out">&nbsp;&nbsp;"backend": <span class="hl">"Node.js"</span>,</div>
+                    <div class="out">&nbsp;&nbsp;"lang": <span class="hl">"TypeScript"</span>,</div>
+                    <div class="out">&nbsp;&nbsp;"db": <span class="hl">"SQL / PostgreSQL"</span></div>
+                    <div class="out">&#125;</div>
+                    <div class="spacer"></div>
+                    <div><span class="prompt">&#10145;</span> <span class="blink-cursor">_</span></div>
+                </div>
+            </div>
+
+            <div class="bento-card info-card span-4" appScrollAnimation>
+                <div class="info-icon">✦</div>
+                <h3>Disponible</h3>
+                <p>Abierto a prácticas, proyectos y oportunidades laborales</p>
+            </div>
+
+            <div class="bento-card location-card span-4" appScrollAnimation>
+                <div class="loc-icon">◎</div>
+                <div class="loc-text">
+                    <span class="label">ubicación</span>
+                    <strong>Colombia</strong>
+                    <span class="sub">Trabajo remoto disponible</span>
+                </div>
+            </div>
+
+            <div class="bento-card lang-card span-4" appScrollAnimation>
+                <div class="lang-badge">A2</div>
+                <div class="lang-text">
+                    <span class="label">idioma</span>
+                    <strong>Inglés A2</strong>
+                    <span class="sub">American School Way</span>
+                    <a href="assets/certificado-ingles.pdf" target="_blank" rel="noopener" class="cert-link">
+                        Ver certificado ↗
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tech-scroll-wrapper" appScrollAnimation>
+            <div class="track">
+                <span *ngFor="let t of techPills" class="tech-pill" [style.color]="t.color">
+                    {{ t.name }}
+                </span>
+                <span *ngFor="let t of techPills" class="tech-pill" [style.color]="t.color" aria-hidden="true">
+                    {{ t.name }}
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>

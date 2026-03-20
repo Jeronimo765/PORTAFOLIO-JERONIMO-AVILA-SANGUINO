@@ -1,0 +1,53 @@
+<section id="experience">
+  <div class="container">
+
+    <div class="section-header" appScrollAnimation>
+      <span class="section-tag">// 04 — experience</span>
+      <h2 class="section-title">Mi recorrido profesional</h2>
+    </div>
+
+    <div class="exp-grid">
+
+      <div class="exp-card" appScrollAnimation>
+        <div class="timeline">
+          <div class="tl-item" *ngFor="let exp of experiences">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <h3 class="tl-role">{{ exp.role }}</h3>
+              <span class="tl-company">// {{ exp.company }}</span>
+              <span class="tl-period">{{ exp.period }}</span>
+              <p class="tl-desc">{{ exp.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-cards">
+
+        <div class="side-card" appScrollAnimation>
+          <h3>Educación</h3>
+          <div class="edu-item">
+            <span class="edu-degree">{{ education.degree }}</span>
+            <span class="edu-inst">// {{ education.institution }}</span>
+            <span class="edu-period">{{ education.period }}</span>
+          </div>
+        </div>
+
+        <div class="side-card" appScrollAnimation>
+          <h3>Certificaciones</h3>
+          <div class="cert-list">
+            <div class="cert-item" *ngFor="let c of certifications">
+              <div class="cert-icon">{{ c.icon }}</div>
+              <div class="cert-info">
+                <span class="cert-name">{{ c.name }}</span>
+                <span class="cert-meta">{{ c.issuer }} · {{ c.year }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

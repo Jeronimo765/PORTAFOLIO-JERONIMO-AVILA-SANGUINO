@@ -1,0 +1,75 @@
+<section id="hero">
+    <canvas #matrixCanvas class="matrix-bg"></canvas>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="container">
+        <div class="hero-grid">
+
+            <!-- Left: Text -->
+            <div class="hero-content">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    Disponible para trabajar
+                </div>
+
+                <h1 class="hero-title">
+                    Hola, soy<br />
+                    <span class="gradient-name">Jerónimo Ávila</span>
+                </h1>
+
+                <p class="hero-typed">
+                    <span>{{ typedText }}</span><span class="cursor-blink">|</span>
+                </p>
+
+                <p class="hero-desc">
+                    Apasionado por el desarrollo de software con base sólida en
+                    tecnologías web. Experiencia práctica en HTML, CSS, JavaScript,
+                    TypeScript, Node.js, Express y SQL. Comprometido con el aprendizaje
+                    continuo y la construcción de soluciones reales.
+                </p>
+
+                <div class="hero-ctas">
+                    <button class="btn-primary" (click)="scrollTo('projects')">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        Ver proyectos
+                    </button>
+                    <button class="btn-secondary" (click)="scrollTo('contact')">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                        </svg>
+                        Contactar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Profile -->
+            <div class="hero-profile">
+                <div class="profile-wrapper">
+                    <div class="spin-ring"></div>
+                    <div class="profile-img">
+                        <img src="assets/profile.jpg" alt="Jerónimo Ávila Sanguino" />
+                    </div>
+
+                    <div *ngFor="let badge of floatingBadges" class="float-badge" [ngClass]="'pos-' + badge.position">
+                        {{ badge.label }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-bar" appScrollAnimation>
+            <div class="stat-item" *ngFor="let stat of displayedStats">
+                <span class="stat-num">{{ stat.value }}+</span>
+                <span class="stat-label">{{ stat.label }}</span>
+            </div>
+        </div>
+    </div>
+</section>

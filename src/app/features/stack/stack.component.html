@@ -1,0 +1,62 @@
+<section id="stack">
+  <div class="container">
+
+    <div class="section-header" appScrollAnimation>
+      <span class="section-tag">// 02 — tech stack</span>
+      <h2 class="section-title">Mi arsenal técnico</h2>
+      <p class="section-desc">Herramientas que domino para construir soluciones fullstack.</p>
+    </div>
+
+    <div class="stack-grid">
+
+      <div class="stack-card" appScrollAnimation>
+        <div class="card-header">
+          <span class="card-icon">✦</span>
+          <div>
+            <h3>Frontend</h3>
+            <span class="card-sub">interfaces de usuario</span>
+          </div>
+        </div>
+        <div class="skill-list">
+          <div class="skill-row" *ngFor="let s of frontend">
+            <div class="skill-dot" [style.background]="s.color"></div>
+            <span class="skill-name">{{ s.name }}</span>
+            <div class="skill-bar">
+              <div class="skill-fill" [style.width.%]="s.level" [style.background]="s.color"></div>
+            </div>
+            <span class="skill-pct">{{ s.level }}%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stack-card" appScrollAnimation>
+        <div class="card-header">
+          <span class="card-icon">⚙</span>
+          <div>
+            <h3>Backend</h3>
+            <span class="card-sub">lógica del servidor</span>
+          </div>
+        </div>
+        <div class="skill-list">
+          <div class="skill-row" *ngFor="let s of backend">
+            <div class="skill-dot" [style.background]="s.color"></div>
+            <span class="skill-name">{{ s.name }}</span>
+            <div class="skill-bar">
+              <div class="skill-fill" [style.width.%]="s.level" [style.background]="s.color"></div>
+            </div>
+            <span class="skill-pct">{{ s.level }}%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="other-skills" appScrollAnimation>
+      <h3>Otras herramientas</h3>
+      <div class="chips">
+        <span class="chip" *ngFor="let s of others">{{ s }}</span>
+      </div>
+    </div>
+
+  </div>
+</section>
