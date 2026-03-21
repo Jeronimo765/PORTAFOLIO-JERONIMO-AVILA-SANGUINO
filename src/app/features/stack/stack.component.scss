@@ -1,9 +1,9 @@
 section {
-    padding: 100px 0;
+    padding: var(--section-padding) 0;
 }
 
 .section-header {
-    margin-bottom: 48px;
+    margin-bottom: 56px;
 }
 
 .section-tag {
@@ -11,35 +11,36 @@ section {
     font-family: var(--font-mono);
     font-size: 12px;
     color: var(--green);
-    margin-bottom: 14px;
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
 }
 
 .section-title {
-    font-size: clamp(28px, 4vw, 42px);
+    font-size: clamp(28px, 4vw, 44px);
     font-weight: 800;
     letter-spacing: -0.02em;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .section-desc {
     font-size: 15px;
     color: var(--text-2);
     max-width: 520px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 .stack-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: var(--grid-gap);
+    margin-bottom: var(--grid-gap);
 }
 
 .stack-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.07);
     border-radius: 20px;
-    padding: 28px;
+    padding: var(--card-padding);
     transition: transform 0.3s, border-color 0.3s;
 
     &:hover {
@@ -52,7 +53,7 @@ section {
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .card-icon {
@@ -63,7 +64,7 @@ section {
 h3 {
     font-size: 17px;
     font-weight: 700;
-    margin: 0 0 2px;
+    margin: 0 0 3px;
 }
 
 .card-sub {
@@ -77,13 +78,13 @@ h3 {
 .skill-list {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 18px;
 }
 
 .skill-row {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .skill-dot {
@@ -101,7 +102,7 @@ h3 {
 
 .skill-bar {
     flex: 1;
-    height: 4px;
+    height: 5px;
     background: rgba(255, 255, 255, 0.06);
     border-radius: 100px;
     overflow: hidden;
@@ -123,7 +124,7 @@ h3 {
     font-size: 11px;
     color: var(--text-3);
     font-family: var(--font-mono);
-    min-width: 32px;
+    min-width: 36px;
     text-align: right;
 }
 
@@ -131,24 +132,24 @@ h3 {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 20px;
-    padding: 24px 28px;
+    padding: 28px 32px;
 
     h3 {
         font-size: 14px;
         font-weight: 600;
         color: var(--text-2);
-        margin-bottom: 16px;
+        margin-bottom: 18px;
     }
 }
 
 .chips {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
 }
 
 .chip {
-    padding: 6px 16px;
+    padding: 7px 18px;
     border-radius: 100px;
     font-size: 12px;
     font-weight: 500;
@@ -156,11 +157,12 @@ h3 {
     color: var(--text-2);
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: color 0.2s, border-color 0.2s;
+    transition: color 0.2s, border-color 0.2s, transform 0.2s;
 
     &:hover {
         color: var(--green);
         border-color: rgba(0, 255, 135, 0.25);
+        transform: scale(1.04);
     }
 }
 
@@ -171,5 +173,16 @@ h3 {
 
     .skill-name {
         min-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-name {
+        min-width: 100px;
+        font-size: 12px;
+    }
+
+    .skill-pct {
+        display: none;
     }
 }

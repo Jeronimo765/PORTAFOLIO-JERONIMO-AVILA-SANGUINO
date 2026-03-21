@@ -18,21 +18,21 @@ export class PortfolioDataService {
     ];
 
     readonly techPills: TechPill[] = [
-        { name: 'Angular 17', color: '#dd0031' },
-        { name: 'TypeScript', color: '#4f8ef7' },
-        { name: 'JavaScript', color: '#f7df1e' },
+        { name: 'Angular 17', color: '#00ff87' },
+        { name: 'TypeScript', color: '#00ff87' },
+        { name: 'JavaScript', color: '#00ff87' },
         { name: 'Node.js', color: '#00ff87' },
-        { name: 'Express', color: '#ea2845' },
-        { name: 'HTML5', color: '#e34f26' },
-        { name: 'CSS3', color: '#264de4' },
-        { name: 'PostgreSQL', color: '#06b6d4' },
-        { name: 'SQL', color: '#4db33d' },
+        { name: 'Express', color: '#00ff87' },
+        { name: 'HTML5', color: '#00ff87' },
+        { name: 'CSS3', color: '#00ff87' },
+        { name: 'PostgreSQL', color: '#00ff87' },
+        { name: 'SQL', color: '#00ff87' },
         { name: 'REST API', color: '#00ff87' },
-        { name: 'Git', color: '#f05033' },
-        { name: 'GitHub', color: '#94a3b8' },
-        { name: 'SCSS', color: '#cc6699' },
-        { name: 'TMDB API', color: '#01d277' },
-        { name: 'SENA Técnico', color: '#f59e0b' },
+        { name: 'Git', color: '#00ff87' },
+        { name: 'GitHub', color: '#00ff87' },
+        { name: 'SCSS', color: '#00ff87' },
+        { name: 'TMDB API', color: '#00ff87' },
+        { name: 'SENA Técnico', color: '#00ff87' },
     ];
 
     readonly stats = [
@@ -136,12 +136,14 @@ export class PortfolioDataService {
             issuer: 'SENA',
             year: '2024',
             icon: 'S',
+            href: 'assets/Tecnico-En-programacion.pdf',
         },
         {
             name: 'Certificado de Inglés A2',
             issuer: 'American School Way',
             year: '2025',
             icon: 'A',
+            href: 'assets/Certificado-Ingles-American-School-Way.pdf',
         },
     ];
 }

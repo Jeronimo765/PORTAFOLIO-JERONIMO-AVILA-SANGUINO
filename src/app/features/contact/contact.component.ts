@@ -19,7 +19,7 @@ export class ContactComponent {
       icon: '@',
       label: 'EMAIL',
       value: 'jeroavila0@gmail.com',
-      href: 'mailto:jeroavila0@gmail.com',
+      href: 'https://mail.google.com/mail/?view=cm&fs=1&to=jeroavila0@gmail.com',
       color: 'var(--green)',
     },
     {
@@ -30,18 +30,25 @@ export class ContactComponent {
       color: 'var(--blue)',
     },
     {
-      icon: '{',
+      icon: '{}',
       label: 'GITHUB',
       value: 'github.com/Jeronimo765',
       href: 'https://github.com/Jeronimo765',
       color: 'var(--purple)',
     },
     {
-      icon: 'cv',
-      label: 'CERTIFICADO',
-      value: 'Inglés A2 — American School Way',
-      href: 'assets/certificado-ingles.pdf',
+      icon: 'A2',
+      label: 'CERTIFICADO INGLÉS',
+      value: 'American School Way — A2',
+      href: 'assets/Certificado-Ingles-American-School-Way.pdf',
       color: 'var(--amber)',
+    },
+    {
+      icon: 'SN',
+      label: 'TÉCNICO SENA',
+      value: 'Programación de Software — 2024',
+      href: 'assets/Tecnico-En-programacion.pdf',
+      color: 'var(--green)',
     },
   ];
 }

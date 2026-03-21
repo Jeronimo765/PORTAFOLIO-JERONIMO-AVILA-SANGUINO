@@ -17,6 +17,7 @@ export interface Certification {
   issuer: string;
   year: string;
   icon: string;
+  href?: string;
 }
 
 export interface Skill {

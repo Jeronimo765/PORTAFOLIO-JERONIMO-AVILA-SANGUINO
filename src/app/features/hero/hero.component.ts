@@ -13,7 +13,7 @@ import { FloatingBadge } from '../../core/models/experience.model';
 export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('matrixCanvas') canvasRef!: ElementRef<HTMLCanvasElement>;
 
-  readonly stats           = this.data.stats;
+  readonly stats = this.data.stats;
   readonly floatingBadges: FloatingBadge[] = this.data.floatingBadges;
 
   typedText = '';
@@ -26,14 +26,14 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
     'TypeScript Advocate',
   ];
   private phraseIndex = 0;
-  private charIndex   = 0;
-  private deleting    = false;
+  private charIndex = 0;
+  private deleting = false;
   private typingTimer?: ReturnType<typeof setTimeout>;
   private matrixTimer?: ReturnType<typeof setInterval>;
   private counterObserver?: IntersectionObserver;
   private drops: number[] = [];
 
-  constructor(private data: PortfolioDataService) {}
+  constructor(private data: PortfolioDataService) { }
 
   ngOnInit(): void {
     this.displayedStats = this.stats.map(s => ({ ...s, value: 0 }));
@@ -77,15 +77,15 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
   private initMatrix(): void {
     const canvas = this.canvasRef?.nativeElement;
     if (!canvas) return;
-    const ctx    = canvas.getContext('2d')!;
-    const chars  = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789{}[]<>/\\|';
-    const fs     = 12;
+    const ctx = canvas.getContext('2d')!;
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789{}[]<>/\\|';
+    const fs = 12;
     const colors = ['#00ff87', '#4f8ef7', '#a855f7'];
 
     const resize = (): void => {
-      canvas.width  = window.innerWidth;
+      canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      this.drops    = Array(Math.floor(canvas.width / fs)).fill(1);
+      this.drops = Array(Math.floor(canvas.width / fs)).fill(1);
     };
     resize();
     window.addEventListener('resize', resize);
@@ -95,7 +95,7 @@ export class HeroComponent implements OnInit, AfterViewInit, OnDestroy {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.font = `${fs}px monospace`;
       this.drops.forEach((drop, i) => {
-        ctx.fillStyle  = colors[i % 3];
+        ctx.fillStyle = colors[i % 3];
         ctx.globalAlpha = 0.65;
         ctx.fillText(chars[Math.floor(Math.random() * chars.length)], i * fs, drop * fs);
         if (drop * fs > canvas.height && Math.random() > 0.975) this.drops[i] = 0;

@@ -7,7 +7,7 @@
     <div class="container">
         <div class="hero-grid">
 
-            <!-- Left: Text -->
+           
             <div class="hero-content">
                 <div class="status-badge">
                     <span class="status-dot"></span>
@@ -16,7 +16,7 @@
 
                 <h1 class="hero-title">
                     Hola, soy<br />
-                    <span class="gradient-name">Jerónimo Ávila</span>
+                    <span class="gradient-name">Jerónimo Avila Sanguino</span>
                 </h1>
 
                 <p class="hero-typed">
@@ -48,23 +48,20 @@
                 </div>
             </div>
 
-            <!-- Right: Profile -->
+            
             <div class="hero-profile">
                 <div class="profile-wrapper">
                     <div class="spin-ring"></div>
                     <div class="profile-img">
-                        <img src="assets/profile.jpg" alt="Jerónimo Ávila Sanguino" />
+                        <img src="assets/Jeronimo-Img.png" alt="Jerónimo Ávila Sanguino" />
                     </div>
 
-                    <div *ngFor="let badge of floatingBadges" class="float-badge" [ngClass]="'pos-' + badge.position">
-                        {{ badge.label }}
-                    </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- Stats -->
+        
         <div class="stats-bar" appScrollAnimation>
             <div class="stat-item" *ngFor="let stat of displayedStats">
                 <span class="stat-num">{{ stat.value }}+</span>

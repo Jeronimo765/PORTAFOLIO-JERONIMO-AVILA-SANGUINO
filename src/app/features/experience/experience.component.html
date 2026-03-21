@@ -36,13 +36,16 @@
         <div class="side-card" appScrollAnimation>
           <h3>Certificaciones</h3>
           <div class="cert-list">
-            <div class="cert-item" *ngFor="let c of certifications">
+            <a class="cert-item" *ngFor="let c of certifications"
+              [href]="c.href || null"
+              [attr.target]="c.href ? '_blank' : null"
+              [attr.rel]="c.href ? 'noopener' : null">
               <div class="cert-icon">{{ c.icon }}</div>
               <div class="cert-info">
                 <span class="cert-name">{{ c.name }}</span>
                 <span class="cert-meta">{{ c.issuer }} · {{ c.year }}</span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
