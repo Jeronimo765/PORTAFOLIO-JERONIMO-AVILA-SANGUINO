@@ -13,7 +13,7 @@ export class PortfolioDataService {
         { label: 'Node.js', position: 'bottom-right' },
         { label: 'JavaScript', position: 'bottom-left' },
         { label: 'HTML & CSS', position: 'top-left' },
-        { label: 'Inglés A2', position: 'top' },
+        { label: 'Inglés B1', position: 'top' },
         { label: 'Fullstack Dev', position: 'bottom' },
     ];
 
@@ -94,16 +94,21 @@ export class PortfolioDataService {
         },
         {
             id: 3,
-            title: 'Proyecto con TypeScript',
-            description: 'Aplicación con TypeScript para gestión de datos, aplicando tipado estático, interfaces y buenas prácticas en el desarrollo de aplicaciones organizadas.',
+            title: 'Nutrex',
+            description: 'Plataforma web de nutrición inteligente con planes personalizados, chatbot con IA, seguimiento de comidas, análisis de alimentos por texto e imagen y recetas saludables.',
             tags: [
-                { label: 'TypeScript', type: 'frontend' },
-                { label: 'HTML & CSS', type: 'frontend' },
-                { label: 'Node.js', type: 'backend' },
+                { label: 'Angular 17', type: 'frontend' },
+                { label: 'Spring Boot 3', type: 'backend' },
+                { label: 'FastAPI', type: 'api' },
+                { label: 'Gemini API', type: 'api' },
+                { label: 'MySQL', type: 'database' },
+                { label: 'Docker', type: 'backend' },
             ],
             githubUrl: 'https://github.com/Jeronimo765',
-            liveUrl: 'https://github.com/Jeronimo765',
-            gradient: 'linear-gradient(135deg,#0a0a2e,#1e3a8a,#4f8ef7)',
+            liveUrl: 'https://proyecto-nutrex.vercel.app/',
+            gradient: 'linear-gradient(135deg,#fff9f0,#f7f4e8,#eff6e8)',
+            imageUrl: 'assets/Logo-Nutrex.png',
+            featured: true,
         },
     ];
 
@@ -139,11 +144,11 @@ export class PortfolioDataService {
             href: 'assets/Tecnico-En-programacion.pdf',
         },
         {
-            name: 'Certificado de Inglés A2',
+            name: 'Certificado de Inglés B1',
             issuer: 'American School Way',
             year: '2025',
-            icon: 'A',
-            href: 'assets/Certificado-Ingles-American-School-Way.pdf',
+            icon: 'B1',
+            href: 'assets/Certificado-Ingles-B1-Jeronimo-Avila-Sanguino.pdf',
         },
     ];
 }

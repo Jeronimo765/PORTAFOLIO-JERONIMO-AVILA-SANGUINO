@@ -15,4 +15,8 @@ export class ProjectsComponent {
   getTagClass(type: ProjectTag['type']): string {
     return `tag-${type}`;
   }
+
+  openProject(url: string): void {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  }
 }

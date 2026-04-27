@@ -6,6 +6,7 @@ export interface Project {
   githubUrl: string;
   liveUrl: string;
   gradient: string;
+  imageUrl?: string;
   featured?: boolean;
 }
 

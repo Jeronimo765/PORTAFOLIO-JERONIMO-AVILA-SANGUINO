@@ -11,10 +11,18 @@
 
         <div class="projects-grid">
 
-            <div class="project-card" *ngFor="let p of projects" appScrollAnimation>
+            <div class="project-card" *ngFor="let p of projects" appScrollAnimation
+                role="link"
+                tabindex="0"
+                (click)="openProject(p.liveUrl)"
+                (keydown.enter)="openProject(p.liveUrl)"
+                (keydown.space)="openProject(p.liveUrl); $event.preventDefault()">
 
-                <div class="project-preview" [style.background]="p.gradient">
+                <div class="project-preview"
+                    [class.has-image]="p.imageUrl"
+                    [style.background]="p.imageUrl ? 'linear-gradient(180deg, #fffdf7 0%, #f3f7ed 100%)' : p.gradient">
                     <span *ngIf="p.featured" class="featured-badge">DESTACADO</span>
+                    <img *ngIf="p.imageUrl" class="project-preview-image" [src]="p.imageUrl" [alt]="'Logo de ' + p.title">
                 </div>
 
                 <div class="project-body">
@@ -29,7 +37,8 @@
                     <p class="project-desc">{{ p.description }}</p>
 
                     <div class="project-links">
-                        <a [href]="p.githubUrl" class="link-btn" target="_blank" rel="noopener noreferrer">
+                        <a [href]="p.githubUrl" class="link-btn" target="_blank" rel="noopener noreferrer"
+                            (click)="$event.stopPropagation()">
                             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
                                 viewBox="0 0 24 24">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0
@@ -42,7 +51,8 @@
                             </svg>
                             GitHub
                         </a>
-                        <a [href]="p.liveUrl" class="link-btn live" target="_blank" rel="noopener noreferrer">
+                        <a [href]="p.liveUrl" class="link-btn live" target="_blank" rel="noopener noreferrer"
+                            (click)="$event.stopPropagation()">
                             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
                                 viewBox="0 0 24 24">
                                 <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />

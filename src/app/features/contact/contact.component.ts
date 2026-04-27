@@ -37,10 +37,10 @@ export class ContactComponent {
       color: 'var(--purple)',
     },
     {
-      icon: 'A2',
+      icon: 'B1',
       label: 'CERTIFICADO INGLÉS',
-      value: 'American School Way — A2',
-      href: 'assets/Certificado-Ingles-American-School-Way.pdf',
+      value: 'American School Way — B1',
+      href: 'assets/Certificado-Ingles-B1-Jeronimo-Avila-Sanguino.pdf',
       color: 'var(--amber)',
     },
     {
